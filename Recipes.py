@@ -7,7 +7,7 @@ recipes = {
 
 #Smelter Recipes  <name>: [[<material_1>,....,material_n>],[amount_1,....,amount_n],<base_production_time>,<yield>]
 #production_time is in seconds
-'Iron Ingot':       [["Iron Ore"],[1],1,1],
+"Iron Ingot":       [["Iron Ore"],[1],1,1],
 "Magnet":           [["Iron Ore"],[1],1.5,1],
 "Copper Ingot":     [["Copper Ore"],[1],1,1],
 
