@@ -1,4 +1,4 @@
-import Recipes
+import recipeListing
 
 basic_fabricator_factor = 0.75
 advanced_fabricator_factor = 1
@@ -10,7 +10,7 @@ product_list = {}
 
 #material as String and wanted in 1/second
 def calculate_per_second(res,wanted):
-    material = Recipes.recipes[res]
+    material = recipeListing.recipes[res]
 
 
     if material:
