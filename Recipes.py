@@ -17,5 +17,5 @@ recipes = {
 "Steel":            [["Iron Ingot"],[1],3,1],
 "Circuit Board":    [["Iron Ingot","Copper Ingot"],[2,1],1,2],
 "Magnetic Coil":    [["Magnet","Copper Ingot"],[2,1],1,2],
-"Electric Motor":   [["Iron Ingot","Gear","Magentic Coil"],[2,1,1],2,1]
+"Electric Motor":   [["Iron Ingot","Gear","Magnetic Coil"],[2,1,1],2,1]
 }
