@@ -121,5 +121,9 @@ recipes = {
     "Iron Ore":		[],
     "Copper Ore":	[],
     "Stone":		[],
-    "Titanium Ore":	[]
+    "Titanium Ore":	[],
+    "Water":		[],
+    "Refined Oil":	[],
+    "Hydrogen":		[],
+    "Coal":			[]
 }

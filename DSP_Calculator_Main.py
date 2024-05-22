@@ -1,5 +1,7 @@
 import recipeListing
 
+run = True
+
 basic_fabricator_factor = 0.75
 advanced_fabricator_factor = 1
 
@@ -22,7 +24,7 @@ def calculate_per_second(res,wanted):
         advanced_fabricators = wanted/base_production_speed             #Amount of Advanced Fabricators needed
 
         for v in range(len(material[0])):
-            per_sec = material[1][v]*advanced_fabricators
+            per_sec = (material[1][v]/base_production)*advanced_fabricators
             calculate_per_second(material[0][v],per_sec)
         if res in product_list:
             product_list[res] = [product_list[res][0]+wanted,product_list[res][1]+basic_fabricators,product_list[res][2]+advanced_fabricators]
@@ -40,12 +42,25 @@ def display_Product_List():
     for n,a in product_list.items():
         print(n + "\nAmount per Second: " + str(a[0]) + "\nNumber of Fabricators: " + str(a[1]) +" (" + str(a[2]) + ")\n")
 
-material = input("Which Material?\n")
-amount = float(input(material + " per Second?\n"))
+while run:
+    material = input("Which Material?\n")
+    
 
-calculate_per_second(material,amount)
+    if material in recipeListing.recipes:   
+        amount = input(material + " per Second?\n")
+        try:
+            float(amount)
+            calculate_per_second(material,amount)
+        except ValueError:
+            print("Not a Number!")
+    elif material == "quit":
+        print("Shutting down...")
+        run = False
+        continue
+    else:
+        print("Material Exisitert nicht")
 
-print("\n-------------------------------------------------------------\n")
+    print("\n-------------------------------------------------------------\n")
 
-display_Product_List()
+    display_Product_List()
 
