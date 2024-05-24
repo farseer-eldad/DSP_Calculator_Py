@@ -45,3 +45,15 @@ def display_Product_List(product_list):
     for n,a in product_list.items():
         print(n + "\nAmount per Second:\t" + str(a[0]) + "\nNumber of Fabricators:\t" + str(a[1]) +" (" + str(a[2]) 
               + ")\nBelts Mk1 (Mk2) [Mk3]\t" + str(a[3][0]) + " (" + str(a[3][1]) + ") [" + str(a[3][2]) + "]\n")
+        
+def display_All_Items():
+    line, line_max = 0,4
+    print("\n")
+    for n in recipeListing.recipes:
+        if line < line_max:    
+            print(n)
+            line += 1
+        else:
+            print(n + "\n")
+            line = 0
+    print("\n")
