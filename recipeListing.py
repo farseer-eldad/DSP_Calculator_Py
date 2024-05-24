@@ -117,7 +117,7 @@ recipes = {
 	"Automatic Piler":						[["Steel","Gear","Super-Magnetic Ring","Processor"],[3,4,1,2],4,1],
 	"Logistics Distributor":						[["Iron Ingot","Plasma Exciter","Processor"],[8,4,4],8,1],
 	"Quantum Chemical Plant":						[["Chemical Plant","Titanium Glass","Strange Matter","Quantum Chip"],[1,10,3,3],10,1],
-	"Silicon Ore":	[],
+	"Silicon Ore":	[["Stone"],[10],10,1],
     "Iron Ore":		[],
     "Copper Ore":	[],
     "Stone":		[],

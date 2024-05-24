@@ -49,8 +49,8 @@ while run:
     if material in recipeListing.recipes:   
         amount = input(material + " per Second?\n")
         try:
-            float(amount)
-            calculate_per_second(material,amount)
+            a = float(amount)
+            calculate_per_second(material,a)
         except ValueError:
             print("Not a Number!")
     elif material == "quit":
