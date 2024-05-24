@@ -1,6 +1,9 @@
 import recipeListing
 import funktions
 
+from dataclasses import dataclass
+
+
 run = True
 
 while run:
