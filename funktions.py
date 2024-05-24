@@ -41,11 +41,58 @@ def calculate_per_second(res,wanted,product_list):
             product_list[res] = [wanted,0,0,[0,0,0]]
         return product_list
     
+#calculates from knowing input rescources(have) to how many res1 can be produced, assuming it can be done
+def calculate_from_source(res1,have,product_list):
+    material = recipeListing.recipes[res1]
+    
+    return_amount = [have,have*basic_fabricator_factor]
+
+
+
+    if material:
+        for v in range(len(material[0])):
+            wanted,product_list = calculate_from_source(v,have,product_list)
+
+            base_production = material[2]*advanced_fabricator_factor                    #Productiontime for 1 Advanced Fabricator or the Player
+            base_production_speed = material[3]/base_production                         #Productionspeed in n/s per Advanced Fabricator
+            slowed_production_speed = base_production_speed*basic_fabricator_factor     #Productionspeed in n/s per Basic Fabricator
+
+            basic_fabricators = wanted[1]/slowed_production_speed              #Amount of Basic Fabricators needed
+            advanced_fabricators = wanted[0]/base_production_speed             #Amount of Advanced Fabricators needed
+
+            belts = [math.ceil(wanted/belt_1),math.ceil(wanted/belt_2),math.ceil(wanted/belt_3)]
+
+            
+        
+    
+    return return_amount,product_list
+
+
+    
 def display_Product_List(product_list):
     for n,a in product_list.items():
         print(n + "\nAmount per Second:\t" + str(a[0]) + "\nNumber of Fabricators:\t" + str(a[1]) +" (" + str(a[2]) 
               + ")\nBelts Mk1 (Mk2) [Mk3]\t" + str(a[3][0]) + " (" + str(a[3][1]) + ") [" + str(a[3][2]) + "]\n")
         
+def print_cmds(list):
+    tabs = "\t:\t"
+
+    for n in list:
+        if len(list[n][0]) < 8:
+            tabs = "\t\t:\t"
+        else:
+            tabs = "\t:\t"
+        print(list[n][0] + tabs + list[n][1])
+    print("\n")
+        
+def show_recipe(item):
+    material = recipeListing.recipes[item]
+    print("Made from:\n")
+    for n in range(len(material[0])):
+        print(material[0][n] + "\t" + str(material[1][n]))
+    print("Time in s:\t" + str(material[2]) + "\nAmount:\t" + str(material[3]) + "\n")
+
+
 def display_All_Items():
     line, line_max = 0,4
     print("\n")

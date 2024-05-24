@@ -4,7 +4,7 @@ recipes = {
 	"Prism":						[["Glass"],[3],2,2],
 	"Plasma Exciter":						[["Magnetic Coil","Prism"],[4,2],2,1],
 	"Hydrogen Fuel Rod":						[["Titanium Ingot","Hydrogen"],[1,10],6,2],
-	" - Thruster":						[["Steel","Copper Ingot"],[2,3],4,1],
+	"Thruster":						[["Steel","Copper Ingot"],[2,3],4,1],
 	"Reinforced Thruster":						[["Titanium Alloy","Electromagnetic Turbine"],[5,5],6,1],
 	"Titanium Crystal":						[["Organic Crystal","Titanium Ingot"],[1,3],4,1],
 	"Casimir Crystal":						[["Titanium Crystal","Graphene","Hydrogen"],[1,2,12],4,1],
