@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lua",
+            "request": "launch",
+            "name": "Launch",
+            "program": "D:/Documents/notes/DSP/Niklas_ratio_calculator/main.lua"
+        }
+    ]
+}
