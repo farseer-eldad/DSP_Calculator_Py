@@ -18,7 +18,7 @@ while run:
     user_in = input("What Operation?\n")
     if user_in == cmd_list[1][0]:
         user_in = input("What Rescource?\n")
-        if user_in in recipeListing.recipes:   
+        if user_in in recipeListing.recipes:
             amount = input(user_in + " per Second?\n")
             try:
                 a = float(amount)
@@ -29,7 +29,7 @@ while run:
                 print("Not a Number!")
     elif user_in == cmd_list[2][0]:
         user_in = input("What Rescource?\n")
-        if user_in in recipeListing.recipes:   
+        if user_in in recipeListing.recipes:
             amount = input(user_in + " per Second?\n")
             try:
                 a = float(amount)
